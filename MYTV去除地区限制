@@ -1,0 +1,18 @@
+访问连接为：http://vdo.mobile.tvb.com/checkCountryAllow.php
+
+返回错误：{"blockMO":false,"ip":"113.72.1.163","country":"CN","accept":false}
+返回正确：{"blockMO":false,"ip":"202.126.57.188","country":"HK","accept":true}
+
+代码搜索：checkCountryAllow.php
+
+修改代码：只修改开始和结束中的地方，不包含开始和结束两行，替换成中间的4条代码，其余输出
+.method 代码开始
+    .locals 5
+
+    .prologue
+
+    const/4 v0, 0x1
+
+    return v0
+
+.end method 代码结束
