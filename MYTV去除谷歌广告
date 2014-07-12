@@ -1,0 +1,6 @@
+反编译apk后提取AndroidManifest.xml文件
+
+把下面这一段文字代码去掉：
+<activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+保存即可
