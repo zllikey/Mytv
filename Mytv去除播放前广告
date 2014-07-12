@@ -1,0 +1,48 @@
+MYTV3.0.6为例子，文件名字为：\com\tvb\mytv_new\activity\bc.smali
+
+可搜索：0x7f070064 进行定位，一般不超过三次，出现广告的地方为播放器广告，播放中途广告（拖动位置广告）
+函数为：a()V
+
+修改为 下面：可能有问题，不知道是什么情况，不知道是哪里的问题
+
+.method public a()V
+    .registers 10
+    
+    .prologue
+    .line 460
+    iget-object v0, p0, Lcom/tvb/mytv_new/activity/bc;->a:Lcom/tvb/mytv_new/activity/VideoPlayerActivity_v2;
+
+    invoke-static {v0}, Lcom/tvb/mytv_new/activity/VideoPlayerActivity_v2;->h(Lcom/tvb/mytv_new/activity/VideoPlayerActivity_v2;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tvb/mytv_new/activity/bc;->a:Lcom/tvb/mytv_new/activity/VideoPlayerActivity_v2;
+
+    invoke-virtual {v1}, Lcom/tvb/mytv_new/activity/VideoPlayerActivity_v2;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f070067
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 461
+    iget-object v0, p0, Lcom/tvb/mytv_new/activity/bc;->a:Lcom/tvb/mytv_new/activity/VideoPlayerActivity_v2;
+
+    invoke-virtual {v0}, Lcom/tvb/mytv_new/activity/VideoPlayerActivity_v2;->b()V
+
+    .line 463
+    iget-object v0, p0, Lcom/tvb/mytv_new/activity/bc;->a:Lcom/tvb/mytv_new/activity/VideoPlayerActivity_v2;
+
+    invoke-static {v0}, Lcom/tvb/mytv_new/activity/VideoPlayerActivity_v2;->B(Lcom/tvb/mytv_new/activity/VideoPlayerActivity_v2;)Lcom/tvb/a/b/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tvb/a/b/a;->b()V
+
+    return-void
+.end method
