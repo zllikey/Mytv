@@ -1,0 +1,88 @@
+————————————————————————————————————————————————————————————
+点播引用的网址为：http://rss.tvb.com/getFeed/
+
+节目地址一般是：http://rss.tvb.com/getFeed/ + 节目类别 + / + 节目名字
+
+剧集的类名为：drama
+url：http://rss.tvb.com/getFeed/drama
+
+  爱回家类名：comehomelove
+  url：http://rss.tvb.com/getFeed/drama/comehomelove
+  
+  結．分@謊情式：tillovedouslie
+  url：http://rss.tvb.com/getFeed/drama/tillovedouslie
+
+动画的类名为：animation
+url：http://rss.tvb.com/getFeed/animation
+
+  銀河機攻隊：majesticprince
+  url：http://rss.tvb.com/getFeed/animation/majesticprince
+
+————————————————————————————————————————————————————————————
+视频地址有，高清、高、低 3个地址
+在读取http://rss.tvb.com/getFeed/drama/comehomelove 这个地址之后，会返回 节目 和 节目地址 
+
+<video url="27/export/4764/000000476317.mp4" type="low" bitrate="176000"/>
+<video url="27/export/4764/000000476318.mp4" type="high" bitrate="352000"/>
+<video url="27/export/4764/000000476321.mp4" type="hd" bitrate="936000"/>
+
+这是几个节目地址了,low=低、high=高、hd=高清
+
+这几个url是url的后半部分，前半部分是：http://token.tvb.com/stream/vod/http/
+
+后半部分为：27/4764/000000476317.mp4  字段 export/ 必须去除
+
+组成url为：http://token.tvb.com/stream/vod/http/25/4096/000000409524.mp4 这个url并不是视频地址，读取后跳转到视频的网址
+
+加上 feed 参数则返回 json文本，不会直接跳转到视频网址
+
+如：http://token.tvb.com/stream/vod/http/25/4096/000000409524.mp4?feed
+
+返回内容：hkIP和hk以外的IP返回的不一样，hkIP返回hk服务器的地址，其他返回cdn服务器的地址
+hkIP返回的：
+{"url":"http:\/\/vdohttp.stream.tvb.com\/vipo\/4ea6e988e9023146b25c029c50405a2c\/53c100a5\/vipo\/25\/4096\/000000409524.mp4"}
+解密后视频地址为：http://vdohttp.stream.tvb.com/vipo/4ea6e988e9023146b25c029c50405a2c/53c100a5/vipo/25/4096/000000409524.mp4
+
+其他返回的：{"url":"http:\/\/cdn.vdohttp.tvb.com\/25\/1456\/145512\/000000409524.mp4?hdnea=1405046662_b03b00726a0527e83f56a091797b1ff7"}
+解密后视频地址为：http://cdn.vdohttp.tvb.com/25/1456/145512/000000409524.mp4?hdnea=1405046662_b03b00726a0527e83f56a091797b1ff7
+
+点播目前除了hkIP的可以播放
+
+
+
+
+
+
+
+
+
+
+
+————————————————————————————————————————————————————————————
+直播引用的网址为：http://rss.tvb.com/rest/lives.php?platform=androidhd
+
+Unicode解密后：
+[{"path":"hdjade","title":"高清翡翠台","banner_image":"http:\/\/img.tvb.com\/tv\/live\/1cdff8b6-ba69-45ac-846d-00af6aedc350.jpg","channel":"hdj","description":"高清翡翠台專門提供高清優質影片，除了播放翡翠台平日黃金時段節目外，更為觀眾送上不同國家的高質素紀錄片。","video_hls_HK":"http:\/\/token.tvb.com\/stream\/live\/hls\/mobilehd_hdj.smil","start_time":"2012-01-01 00:00:00","end_time":"2199-12-31 23:59:59"},{"path":"j2","title":"J2","banner_image":"http:\/\/img.tvb.com\/tv\/live\/97f55adb-5a94-48f0-a9de-02dcb135cc0f.jpg","channel":"j2","description":"J2是年青觀眾頻道，提供潮流資訊自家製節目，強勢打造年青及潮人王國。","video_hls_HK":"http:\/\/token.tvb.com\/stream\/live\/hls\/mobilehd_j2.smil","start_time":"2012-01-01 00:00:00","end_time":"2199-12-31 23:59:59"},{"path":"inews","title":"互動新聞台","banner_image":"http:\/\/img.tvb.com\/tv\/live\/72e7d05f-83ce-467d-a1cb-3f3d0b223ac0.jpg","channel":"inews","description":"互動新聞台iNews是全港唯一免費24小時高清頻道，提供24小時新聞、時事、體育、財經及互動資訊服務。\r\n\r\n頻道在2009年啟播，由2012年起，所有直播及錄播新聞時段，陸續以高清製作，如有突發新聞或記者會需播放，互動新聞台會隨時插播，以多視窗形式展示，並提供多聲道廣播供觀眾選擇。\r\n\r\n互動新聞台採用16:9廣播，加添互動功能「NewsBar」提供財經和天氣資訊，觀眾可以利用遙控器自行選擇。新聞台所有時段均提供字幕，除定點新聞，中華掠影、新聞檔案、時事通識、時事多面睇、周末主播室、周末闖蕩、天氣報告都有字幕。\r\n\r\n一直以來，無論是大型選舉、颱風襲港或其他重要新聞，互動新聞台時刻送上多角度、全方位的報道與分析。展望將來，iNews會繼續「緊扣生活，以人為先」，與觀眾一起見證大時代。","video_hls_HK":"http:\/\/token.tvb.com\/stream\/live\/hls\/mobilehd_inews.smil","start_time":"2013-01-01 00:00:00","end_time":"2199-12-31 23:59:59"}]
+
+高清翡翠台：http://token.tvb.com/stream/live/hls/mobilehd_hdj.smil
+J2：        http://token.tvb.com/stream/live/hls/mobilehd_j2.smil
+互動新聞台：http://token.tvb.com/stream/live/hls/mobilehd_inews.smil
+
+http://token.tvb.com/stream/live/hls/mobilehd_hdj.smil 这个url并不是视频地址，读取后跳转到视频的网址
+
+加上 feed 参数则返回 json文本，不会直接跳转到视频网址
+
+如：http://token.tvb.com/stream/live/hls/mobilehd_hdj.smil?feed
+
+
+返回内容：hkIP和hk以外的IP返回的不一样，hkIP返回hk服务器的地址，其他返回cdn服务器的地址
+hkIP返回的：
+{"url":"http:\/\/e1b.vdowowza.vip.hk3.tvb.com\/mytvlive\/smil:mobilehd_hdj.smil\/playlist.m3u8?ts=1405158814&sig=7d00e3bb48d7085c7b4277769e3987d2"}
+解密后视频地址为：http://e1b.vdowowza.vip.hk3.tvb.com/mytvlive/smil:mobilehd_hdj.smil/playlist.m3u8?ts=1405158814&sig=7d00e3bb48d7085c7b4277769e3987d2
+
+其他返回的：
+{"url":"http:\/\/hdlivetvb-lh.akamaihd.net\/i\/hdj_1@135131\/master.m3u8?hdnea=st=1405158529~exp=1405194529~acl=\/i\/hdj_1@135131\/*~hmac=023560aaad6f3a08504401d9a296fe75c69be4254ccb7e28cdd1aa3ce5e7e292"}
+解密后视频地址为：http://hdlivetvb-lh.akamaihd.net/i/hdj_1@135131/master.m3u8?hdnea=st=1405158529~exp=1405194529~acl=/i/hdj_1@135131/*~hmac=023560aaad6f3a08504401d9a296fe75c69be4254ccb7e28cdd1aa3ce5e7e292
+
+直播目前只能hk的IP可以播放
+————————————————————————————————————————————————————————————
