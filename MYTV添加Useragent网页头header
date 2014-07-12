@@ -1,0 +1,31 @@
+搜索："t"  包含双引号
+得出几个地方，不超过3处
+目标位置应该是：com\tvb\mytv_new\g\b.smali
+双击位置的出"t"是这样的
+
+    .line 466
+    const-string v0, "t"
+
+    invoke-virtual {v4, v0, p2}, Lorg/apache/http/client/methods/HttpPost;->setHeader(Ljava/lang/String;Ljava/lang/String;)V
+    
+    
+按照上面的情况变成下面的，header网页头
+v0是 头域 , v2是 头值
+通用显示为：X-Forwarded-For: 124.248.205.24
+            User-Agent: Android
+            
+添加下面的东西在 这段代码之后 
+    const-string v0, "X-Forwarded-For"
+
+    const-string v2, "124.248.205.24"
+
+    invoke-virtual {v4, v0, v2}, Lorg/apache/http/client/methods/HttpPost;->setHeader(Ljava/lang/String;Ljava/lang/String;)V
+
+
+
+    const-string v0, "User-Agent"
+
+    const-string v2, "Android"
+
+    invoke-virtual {v4, v0, v2}, Lorg/apache/http/client/methods/HttpPost;->setHeader(Ljava/lang/String;Ljava/lang/String;)V
+
