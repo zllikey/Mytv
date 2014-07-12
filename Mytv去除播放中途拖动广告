@@ -1,0 +1,32 @@
+“广告载入中...” 文字的资源名字为 “connecting_ad” ASM代码十六进制地址为 “0x7f070064”
+
+可以直接搜索 “0x7f070064” 得出调用广告的代码,一般不超过3处
+
+MYTV 3.0.6 为例子,代码文件是：com\tvb\mytv_new\activity\VideoPlayerActivity_v2.smali
+
+代码函数为：a(I)V
+
+修改成如下的内容
+
+.method public a(I)V
+    .registers 10
+
+    .prologue
+    .line 1074
+
+    iget-object v0, p0, Lcom/tvb/mytv_new/activity/VideoPlayerActivity_v2;->d:Lcom/tvb/mytv_new/videoplayer/MYTVHDPlayer;
+
+    invoke-virtual {v0}, Lcom/tvb/mytv_new/videoplayer/MYTVHDPlayer;->startAdTimeout()V
+
+    .line 1075
+    iget-object v0, p0, Lcom/tvb/mytv_new/activity/VideoPlayerActivity_v2;->F:Lcom/tvb/a/b/a;
+
+    invoke-virtual {v0}, Lcom/tvb/a/b/a;->a()V
+
+    return-void
+.end method
+
+
+前两条长的代码不能删除，原因未名
+
+后两条长的代码也不能删除，原因为名
