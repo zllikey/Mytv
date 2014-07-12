@@ -10,28 +10,28 @@ set time1=%time:~0,2%%time:~3,2%%time:~6,2%
 cd /d %~dp0
 del /Q /F /S classes.dex *signed.apk *_classes.dex Signed_*>nul 2>NUL
 
-echo æ­£åœ¨å›žç¼–DEX
+echo ÕýÔÚ»Ø±àDEX
 rem java -jar "smali.jar" Smali* -o "%NAME%_classes.dex">NUL 2>NUL
-java -jar "smali.jar" Smali* -o "classes.dex">NUL 2>NUL
+java -jar "./apktool/smali.jar" Smali* -o "classes.dex">NUL 2>NUL
 
 if exist "classes.dex" (
-echo å›žç¼–å®Œæˆ
+echo »Ø±àÍê³É
 rem ren *_classes.dex classes.dex
 
 rem copy Smali_mytvhd_classes.dex classes.dex
-echo æ·»åŠ DEXåˆ°%filename%
+echo Ìí¼ÓDEXµ½%filename%
 rem "C:\Program Files\7-Zip\7z.exe" a -tzip -mx9 %filename% classes.dex>NUL 2>NUL
-7z.exe a -tzip %filename% classes.dex>NUL 2>NUL
-echo ç­¾å%filename%
-java -jar "signapk.jar" "testkey.x509.pem" "testkey.pk8" %filename% "Signed_%filename%" >nul 2>NUL
-rem echo å®‰è£…%filename%
+"./apktool/7z.exe" a -tzip %filename% classes.dex>NUL 2>NUL
+echo Ç©Ãû%filename%
+java -jar "./apktool/signapk.jar" "./apktool/testkey.x509.pem" "./apktool/testkey.pk8" %filename% "Signed_%filename%" >nul 2>NUL
+rem echo °²×°%filename%
 rem adb connect 127.0.0.1:5551
 rem adb install -r Signed_*.apk
-rem echo å®‰è£…å®Œæ¯•
+rem echo °²×°Íê±Ï
 
 
 ) else (
-echo ç¼–è¯‘å¤±è´¥
+echo ±àÒëÊ§°Ü
 
 )
 
@@ -39,6 +39,6 @@ echo ç¼–è¯‘å¤±è´¥
 
 set time2=%time:~0,2%%time:~3,2%%time:~6,2%
 set /a time3=%time2%-%time1%
-echo ç”¨æ—¶%time3%ç§’
+echo ÓÃÊ±%time3%Ãë
 ping 127.1 -n 3 >NUL 2>NUL
 exit
