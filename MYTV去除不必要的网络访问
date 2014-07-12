@@ -1,0 +1,81 @@
+以Mytv 3.0.6为例子
+包含@@@都是我已经去除了的连接，其他可以逐渐尝试
+
+
+
+----------------------------------------
+“在 'D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\a\a\b.smali' 中查找 'Http://@@' (2014/7/12 10:44:17; 2014/7/12 10:44:17)：”
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\a\a\b.smali(172):     const-string v0, "http://@@@@@@@@@@@@@@@@@@@@@@@/p2?"
+找到 'Http://@@' 1 次. 
+----------------------------------------
+“在 'D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\a\a\c.smali' 中查找 'Http://@@' (2014/7/12 10:44:17; 2014/7/12 10:44:17)：”
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\a\a\c.smali(2006):     const-string v0, "http://@@@@@@@@@@@@@@@@@@@@@/p2?"
+找到 'Http://@@' 1 次. 
+----------------------------------------
+“在 'D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\a\f\u.smali' 中查找 'Http://@@' (2014/7/12 10:44:17; 2014/7/12 10:44:17)：”
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\a\f\u.smali(2067):     const-string v0, "http://@@@@@@@@@@@@@@@@@@@@@@/offline"
+找到 'Http://@@' 1 次. 
+----------------------------------------
+“在 'D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\google\ads\bu.smali' 中查找 'Http://@@' (2014/7/12 10:44:18; 2014/7/12 10:44:18)：”
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\google\ads\bu.smali(109):     const-string v2, "http://@@@@@@@@@@@@@/mraid/v1/mraid_app_banner.js"
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\google\ads\bu.smali(120):     const-string v2, "http://@@@@@@@@@@@@@@@@/mraid/v1/mraid_app_expanded_banner.js"
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\google\ads\bu.smali(131):     const-string v2, "http://@@@@@@@@@@@@@@/mraid/v1/mraid_app_interstitial.js"
+找到 'Http://@@' 3 次. 
+----------------------------------------
+“在 'D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\google\ads\b\a\a\a.smali' 中查找 'Http://@@' (2014/7/12 10:44:18; 2014/7/12 10:44:18)：”
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\google\ads\b\a\a\a.smali(33):     const-string v1, "http://@@@@@@@@@@/instream/html5/native/native_sdk.html"
+找到 'Http://@@' 1 次. 
+----------------------------------------
+“在 'D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\google\ads\c\n.smali' 中查找 'Http://@@' (2014/7/12 10:44:18; 2014/7/12 10:44:18)：”
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\google\ads\c\n.smali(529):     const-string v0, "http://@@@@@@@@@@@@@@@/safa/"
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\google\ads\c\n.smali(536):     const-string v0, "http://@@@@@@@@@@@@@@/"
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\google\ads\c\n.smali(553):     const-string v0, "<html><head><script src=\"http://@@@@@@@@@@@@@@/safa/sdk-core-v40.js\"></script><script>"
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\google\ads\c\n.smali(560):     const-string v0, "<html><head><script src=\"http://@@@@@@@@@@@@@@@@/sdk-core-v40.js\"></script><script>"
+找到 'Http://@@' 4 次. 
+----------------------------------------
+“在 'D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\google\ads\c\w.smali' 中查找 'Http://@@' (2014/7/12 10:44:18; 2014/7/12 10:44:18)：”
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\google\ads\c\w.smali(494):     const-string v0, "http://@@@@@@@@@/imp?ad_loc=@gw_adlocid@&qdata=@gw_qdata@&ad_network_id=@gw_adnetid@&js=@gw_sdkver@&session_id=@gw_sessid@&seq_num=@gw_seqnum@&nr=@gw_adnetrefresh@&adt=@gw_adt@&aec=@gw_aec@"
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\google\ads\c\w.smali(552):     const-string v0, "http://@@@@@@@@@@nofill?ad_loc=@gw_adlocid@&qdata=@gw_qdata@&js=@gw_sdkver@&session_id=@gw_sessid@&seq_num=@gw_seqnum@&adt=@gw_adt@&aec=@gw_aec@"
+找到 'Http://@@' 2 次. 
+----------------------------------------
+“在 'D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\a\a\c.smali' 中查找 'Http://@@' (2014/7/12 10:44:19; 2014/7/12 10:44:19)：”
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\a\a\c.smali(848):     const-string v2, "http://@@@@@@@@@@@@@@@@/DARTProxy/mobile.handler"
+找到 'Http://@@' 1 次. 
+----------------------------------------
+“在 'D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\a\a\d.smali' 中查找 'Http://@@' (2014/7/12 10:44:19; 2014/7/12 10:44:19)：”
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\a\a\d.smali(42):     const-string v1, "http://@@@@@@@@@@@@@@@@@/DARTProxy/mobile.handler"
+找到 'Http://@@' 1 次. 
+----------------------------------------
+“在 'D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\a\a\n.smali' 中查找 'Http://@@' (2014/7/12 10:44:19; 2014/7/12 10:44:19)：”
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\a\a\n.smali(40):     const-string v1, "http://@@@@@@@@@@@@@@@@@@@/DARTProxy/mobile.handler"
+找到 'Http://@@' 1 次. 
+----------------------------------------
+“在 'D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\a\a\p.smali' 中查找 'Http://@@' (2014/7/12 10:44:19; 2014/7/12 10:44:19)：”
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\a\a\p.smali(42):     const-string v1, "http://@@@@@@@@@@@@@@@@/DARTProxy/mobile.handler"
+找到 'Http://@@' 1 次. 
+----------------------------------------
+“在 'D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\a\a\c\b.smali' 中查找 'Http://@@' (2014/7/12 10:44:19; 2014/7/12 10:44:19)：”
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\a\a\c\b.smali(395):     const-string v1, "http://@@@@@@@@@@@@@@@@@@@@@@/gampad/ads?"
+找到 'Http://@@' 1 次. 
+----------------------------------------
+“在 'D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\mytv_new\g\b.smali' 中查找 'Http://@@' (2014/7/12 10:44:19; 2014/7/12 12:54:54)：”
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\mytv_new\g\b.smali(112):     const-string v0, "http://@@@@@@@@@@@@/platform/get_msg.php"
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\mytv_new\g\b.smali(122):     const-string v0, "http://@@@@@@@@@@@@@/checkDeviceType.php?model="
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\mytv_new\g\b.smali(172):     const-string v0, "http://@@@@@@@@@@@@@@@@/getVideoProfileID.php"
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\mytv_new\g\b.smali(177):     const-string v0, "http://@@@@@@@@@@@@@/checkMustVisualOn.php"
+D:\Users\Good\Desktop\逆向\mytv3.0.6\Smali-classes\com\tvb\mytv_new\g\b.smali(4259):     const-string v3, "http://@@@@@@@@@@@@@@/getHardwareInfo_v2.php"
+找到 'Http://@@' 5 次. 
+搜索完成，找到 'Http://@@' 23 次. (13 个文件). 
+
+
+
+
+----------------------------------------
+“在 'D:\Users\Good\Desktop\逆向\mytv3.0.6\mytv\conf.properties' 中查找 'Http://@@' (2014/7/12 18:15:02; 2014/6/17 1:22:24)：”
+D:\Users\Good\Desktop\逆向\mytv3.0.6\mytv\conf.properties(3): NIELSEN_URL_PREFIX=http://@@@@@@@@@@@@@@@@@@@@@@@@@@@/priv-bin/m?ci=
+D:\Users\Good\Desktop\逆向\mytv3.0.6\mytv\conf.properties(6): NIELSEN_URL_VIDEO_PREFIX=http://@@@@@@@@@@@@@@@@@@@@/priv-bin/m?ci=
+D:\Users\Good\Desktop\逆向\mytv3.0.6\mytv\conf.properties(17): COMSCORE_URL_PREFIX=http://@@@@@@@@@@@@@@@@@@@@@@/p?c1=1
+找到 'Http://@@' 3 次. 
+搜索完成，找到 'Http://@@' 3 次. (1 个文件). 
+
+
