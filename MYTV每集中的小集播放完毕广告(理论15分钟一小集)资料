@@ -1,0 +1,12 @@
+<duration>2559.465</duration>
+<breakpoint>553.28</breakpoint>
+<breakpoint>1329.68</breakpoint>
+<breakpoint>1951.36</breakpoint>
+
+上面这些东西能看懂吗，在rss.tvb.com获取节目的时候出现的xml文件里面每一集都有这些东西，当然里面的数字会不相同，
+duration 代表视频的长度
+breakpoint 代表一小集的时间点，视频播发器到了这个时候就会弹出广告，然后广告播放完毕之后就会返回到播放器，从这个时间点重新播放后面的
+
+第二个时间点和第三个时间点的操作是一样的，
+解决方法就是在java代码去掉识别breakpoint的指令
+或者获取节目的时候取消这个时间点就可以
