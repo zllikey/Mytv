@@ -46,3 +46,41 @@ MYTV3.0.6为例子，文件名字为：\com\tvb\mytv_new\activity\bc.smali
 
     return-void
 .end method
+
+
+
+
+
+
+
+============================2014-08-21方法=================================
+读取广告网址
+api.ads.tvb.com/adtree/video.php?platform=mobile&product=mytv&os=android&dtype=phone
+返回的信息
+{"adsite":"app.mytv.android.tvb","video_ad":{"preroll":1,"midroll1":1,"midroll2":1,"midroll3":1,"live":1,"general":1}}
+
+
+可以寻找"video_ad"字串符。得大概调用的函数为
+a(Ljava/util/HashMap;)V
+这个函数最后会返回，暂且无返回参数，可以将里面的内容去掉修改为直接返回
+.method public static a(Ljava/util/HashMap;)V
+    .registers 6
+
+    .prologue
+
+    return-void
+
+.end method
+上面这个是第一个方法
+下面的可以寻找调用这个函数的代码地址位置，搜索“a(Ljava/util/HashMap;)V”
+得出调用该函数的位置为
+----------------------------------------
+“在 'D:\Users\Good\Desktop\逆向\mytv3.1.0\Smali-classes\com\tvb\mytv_new\activity\VideoPlayerActivity_v2.smali' 中查找 'a(Ljava/util/HashMap;)V' (2014/8/21 17:56:34; 2014/8/21 17:56:34)：”
+D:\Users\Good\Desktop\逆向\mytv3.1.0\Smali-classes\com\tvb\mytv_new\activity\VideoPlayerActivity_v2.smali(2639):     invoke-static {v0}, Lcom/tvb/mytv_new/g/e;->a(Ljava/util/HashMap;)V
+找到 'a(Ljava/util/HashMap;)V' 1 次. 
+----------------------------------------
+
+双击定位位置
+在该代码的前面加上 "#" 注释符号，即是下面这样
+#  invoke-static {v0}, Lcom/tvb/mytv_new/g/e;->a(Ljava/util/HashMap;)V
+空格和没空格都无所谓
