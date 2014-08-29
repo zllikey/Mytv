@@ -1,0 +1,31 @@
+搜索字段
+http://api.tvb.com/platform/version.php?env=prod&platform=android&lang=
+文件位置
+D:\Users\Administrator\Desktop\mytv304\smali\com\tvb\mytv_new\g\b.smali
+----------------------------------------
+替换为
+http://tvblive.duapp.com/mytv/version.php?env=prod&platform=android&lang=
+
+上面文件的的内容为
+{"version":"3.0.9","message":"\u8acb\u6309\u300c\u66f4\u65b0\u300d\u4e0b\u8f09\u6700\u65b0\u7248\u672c\ufe57","url":"https:\/\/play.google.com\/store\/apps\/details?id=com.quickplay.tvbmytv"}
+
+version = 随便填写版本号
+message = 提示信息  Unicode编码
+url     = 弹出的连接
+
+----------------------------------------------------------------
+提示信息
+----------------------------------------------------------------
+网页头
+POST /platform/get_msg.php HTTP/1.1
+Content-Length: 127
+Content-Type: application/x-www-form-urlencoded
+Host: api.tvb.com
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/UNAVAILABLE (java 1.4)
+
+token=6bfd72aa0bc1ac7919c336a5b91b72f381669a94&time=1409311553650&lang=zh-hant-hk&product=mytv&type=android_phone&version=3.1.0
+---------------
+返回信息
+{"status":1,"title":"\u6295\u9078\u5fc3\u6c34\u51a0\u8ecd\uff0c\u6709\u6a5f\u6703\u8d0f\u8d70\u50f9\u503c\u6e2f\u5e63 $494,000 \u5605\u540d\u8eca !","message":"\u7acb\u5373\u767b\u5165 TVB fun App \u53c3\u8207\u300a\u9999\u6e2f\u5c0f\u59d0\u7af6\u9078 2014\u300b\u5168\u6c11\u6295\u7968 ! \u6c7a\u8cfd\u6703\u55ba\u4eca\u500b\u661f\u671f\u65e5\u665a 9:00 \u8209\u884c\uff0c\u5bc6\u5207\u7559\u610f !","id":"171","url":"","urlmode":"","modified":1409201003}
+可以进行修改等等
