@@ -1,0 +1,36 @@
+想法，在界面直接点击csl1080p就显示需要登记号码，而点击其他则正常，因此断定软件是判断该节目的唯一id，所以在这里下手，1080p的id有两个，一个是itemid(节目唯一id)，另一个是path名字(英文名，目前情况来看，不是唯一的)，1080p节目ID是105，寻找无果，那就寻找path了，名字为others3，找到两处，经过验证，主要的代码位置如下
+D:\Users\Good\Desktop\逆向\mytv3.2.0\classes\com\tvb\mytv_new\activity\ContentDescriptionActivity.smali(1552):     const-string v1, "others3"
+
+从该行代码往下看起来大致是这样的
+    iget-object v0, p0, Lcom/tvb/mytv_new/activity/ContentDescriptionActivity;->r:Ljava/lang/String;
+
+    const-string v1, "others3"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+#    if-eqz v0, :cond_1fb
+判断path是others3就直接跳过高清显示
+
+    iget-object v0, p0, Lcom/tvb/mytv_new/activity/ContentDescriptionActivity;->i:Landroid/content/Intent;
+
+    const-string v1, "video_fhd"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+#    if-eqz v0, :cond_1fb
+判断视频清晰度如果有fullhd就直接跳过高清显示
+理论上注释下面一个判断就可以直接显示1080p视频选项了
+
+
+如果需要进入1080p视频专区则需要找到others3字段，全部改为一个不存在的节目路径英文名,例如@@
+共两处
+D:\Users\Good\Desktop\逆向\mytv3.2.0\classes\com\tvb\mytv_new\activity\CategoriesActivity.smali(5100):     const-string v1, "others3"
+D:\Users\Good\Desktop\逆向\mytv3.2.0\classes\com\tvb\mytv_new\activity\ContentDescriptionActivity.smali(1552):     const-string v1, "others3"
+
+改为
+D:\Users\Good\Desktop\逆向\mytv3.2.0\classes\com\tvb\mytv_new\activity\CategoriesActivity.smali(5100):     const-string v1, "@@"
+D:\Users\Good\Desktop\逆向\mytv3.2.0\classes\com\tvb\mytv_new\activity\ContentDescriptionActivity.smali(1552):     const-string v1, "@@"
