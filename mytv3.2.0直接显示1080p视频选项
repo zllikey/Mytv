@@ -21,9 +21,9 @@ D:\Users\Good\Desktop\逆向\mytv3.2.0\classes\com\tvb\mytv_new\activity\Content
 
     move-result-object v0
 
-#    if-eqz v0, :cond_1fb
+    if-eqz v0, :cond_1fb
 判断视频清晰度如果有fullhd就直接跳过高清显示
-理论上注释下面一个判断就可以直接显示1080p视频选项了
+理论上注释上面一个判断就可以直接显示1080p视频选项了
 
 
 如果需要进入1080p视频专区则需要找到others3字段，全部改为一个不存在的节目路径英文名,例如@@
